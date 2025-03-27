@@ -8,6 +8,7 @@
 <body>
     
     <p id="display"></p>
+    <p id="dis"></p>
     <script>
         class Persona {//Creamos la clase Persona con los parametros nombre y edad, y hacemos el constructo, sin haber declarado antes los atributos
             constructor(nombre, edad) {
@@ -21,19 +22,31 @@
         }
         const persona1= new Persona("Pepe",22);
         const maria= new Persona("Maria",15);
+        
+        
+        
         class Coche {//Creamos la clase Persona con los parametros nombre y edad, y hacemos el constructo, sin haber declarado antes los atributos
+            #kilometraje;
+            
             constructor(marca, modelo,año) {
             this.marca = marca;
             this.modelo = modelo;
             this.año=año;
+           
              }
              describir(){
                 document.getElementById('display').textContent=miCoche.marca+" , "+miCoche.modelo+" , "+miCoche.año;
-        }
+            }
+            obtenerkilometraje(){
+                return  this.#kilometraje;
+
+            }
         }
         
         const miCoche=new Coche("Toyota","Corolla",2020);
         miCoche.describir();
+        document.getElementById(dis).innerHTML= miCoche.obtenerkilometraje();
+        
         //document.getElementById('display').textContent=miCoche.marca+" , "+miCoche.modelo+" , "+miCoche.año
         console.log(miCoche.marca,miCoche.modelo,miCoche.año);
         
