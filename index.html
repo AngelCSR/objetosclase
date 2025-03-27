@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="display"></p>
+    <script>
+        class Persona {//Creamos la clase Persona con los parametros nombre y edad, y hacemos el constructo, sin haber declarado antes los atributos
+            constructor(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+             }
+             saludar() {
+                 alert(`Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`);//poner el valor de la variable directamente sin concatenar
+             }
+
+        }
+        const persona1= new Persona("Pepe",22);
+        const maria= new Persona("Maria",15);
+        class Coche {//Creamos la clase Persona con los parametros nombre y edad, y hacemos el constructo, sin haber declarado antes los atributos
+            constructor(marca, modelo,año) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.año=año;
+             }
+             describir(){
+                document.getElementById('display').textContent=miCoche.marca+" , "+miCoche.modelo+" , "+miCoche.año;
+        }
+        }
+        
+        const miCoche=new Coche("Toyota","Corolla",2020);
+        miCoche.describir();
+        //document.getElementById('display').textContent=miCoche.marca+" , "+miCoche.modelo+" , "+miCoche.año
+        console.log(miCoche.marca,miCoche.modelo,miCoche.año);
+        
+
+    </script>
+</body>
+</html>
