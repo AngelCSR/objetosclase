@@ -27,7 +27,7 @@
         persona1.saludar();
         
         
-        
+        /************************************************Clase Coche**********************************************/
         
         class Coche {//Creamos la clase Persona con los parametros nombre y edad, y hacemos el constructo, sin haber declarado antes los atributos
             #kilometraje;
@@ -48,6 +48,7 @@
 
             }
         }
+        /****************Camion****Clase extendida de Coche************/
         class Camion extends Coche{
             constructor(marca,modelo,año,kms,tonelaje){
                 super(marca,modelo,marca,kms);
@@ -58,6 +59,35 @@
                 this.tonelaje
             }
         }
+
+        let cam= new Camion("Scania","V23",2023,500000,10000)
+        cam.cargar();
+        
+        /****************Camion****Clase extendida de Coche************/
+
+        const miCoche=new Coche("Toyota","Corolla",2020,1100);
+        let tuCoche= new Coche("Seat","Leon",2022,2000);
+        let suCoche= new Coche("Fiat","500",2022,300000)
+
+          
+        miCoche.describir();
+        tuCoche.describir();
+        suCoche.describir();
+        document.getElementById('dis').innerHTML= "El kilometrake de : "+miCoche.marca+
+        " "+miCoche.modelo+" es de "+miCoche.getKilometraje()+"<br>"+"El kilometrake de : "+tuCoche.marca+
+        " "+tuCoche.modelo+" es de "+tuCoche.getKilometraje()+"<br>"+"El kilometrake de : "+suCoche.marca+
+        " "+suCoche.modelo+" es de "+suCoche.getKilometraje();
+
+
+   
+        //document.getElementById('display').textContent=miCoche.marca+" , "+miCoche.modelo+" , "+miCoche.año
+        //console.log(miCoche.marca,miCoche.modelo,miCoche.año);
+       
+      
+         /************************************************Coche**********************************************/
+
+
+        /**********Animal************/
             class Animal {
                 constructor(nombre) {
                     this.nombre = nombre;
@@ -78,38 +108,25 @@
                     document.getElementById("dis2").textContent+=`${this.nombre} maulla.`
                 }
             }
-            
-            
-
-        
-        const miCoche=new Coche("Toyota","Corolla",2020,1100);
-        let tuCoche= new Coche("Seat","Leon",2022,2000);
-        let suCoche= new Coche("Fiat","500",2022,300000)
-        let cam= new Camion("Scania","V23",2023,500000,10000)
-        
-        miCoche.describir();
-        tuCoche.describir();
-        suCoche.describir();
-        document.getElementById('dis').innerHTML= "El kilometrake de : "+miCoche.marca+
-        " "+miCoche.modelo+" es de "+miCoche.getKilometraje()+"<br>"+"El kilometrake de : "+tuCoche.marca+
-        " "+tuCoche.modelo+" es de "+tuCoche.getKilometraje()+"<br>"+"El kilometrake de : "+suCoche.marca+
-        " "+suCoche.modelo+" es de "+suCoche.getKilometraje();
-        cam.cargar();
-        
-        
-        //document.getElementById('display').textContent=miCoche.marca+" , "+miCoche.modelo+" , "+miCoche.año
-        //console.log(miCoche.marca,miCoche.modelo,miCoche.año);
-       
-       let miPerro= new Perro("Tomi");
-       let miGato= new Gato("Kity")
-       miPerro.hacerSonido();
-       miGato.hacerSonido();
-        const animales = [new Perro("Tobi"),new Gato("Misu")];
-        
-        for(a of animales){
-            a.hacerSonido();
-        }
+                let miPerro= new Perro("Tomi");
+                let miGato= new Gato("Kity")
+                miPerro.hacerSonido();
+                miGato.hacerSonido();
+                    const animales = [new Perro("Tobi"),new Gato("Misu")];
+                    
+                    for(a of animales){
+                        a.hacerSonido();
+                    }
         //animales.forEach(animal=> animal.hacerSonido());/*Tambien se puede hacer este bucle*/
+
+
+            /**********Animal************/
+            
+            
+        
+     
+        
+     
 
         
         
