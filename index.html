@@ -105,8 +105,11 @@
        miPerro.hacerSonido();
        miGato.hacerSonido();
         const animales = [new Perro("Tobi"),new Gato("Misu")];
-
-        animales.forEach(animal=> animal.hacerSonido());
+        
+        for(a of animales){
+            a.hacerSonido();
+        }
+        //animales.forEach(animal=> animal.hacerSonido());/*Tambien se puede hacer este bucle*/
 
         
         
