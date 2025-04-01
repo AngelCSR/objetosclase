@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+       
+        class Libro {
+        constructor(titulo, autor, isbn) {
+            this.titulo = titulo;
+            this.autor = autor;
+            this.isbn = isbn;
+        }
+        }
+        class Biblioteca {
+        constructor() {
+            this.libros = [];
+        }
+
+        agregarLibro(libro) {
+            this.libros.push(libro);
+        }
+
+        eliminarLibro(isbn) {
+            this.libros = this.libros.filter(libro => libro.isbn !== isbn);
+        }
+
+        buscarLibroPorTitulo(titulo) {
+            return this.libros.find(libro => libro.titulo === titulo);
+        }
+        }
+
+        // Crear una instancia de Biblioteca
+        const miBiblioteca = new Biblioteca();
+
+        // Crear algunos libros
+        const libro1 = new Libro("Cien años de soledad", "Gabriel García Márquez", "978-0525432253");
+        const libro2 = new Libro("1984", "George Orwell", "978-0451524935");
+        const libro3 = new Libro("Don Quijote de la Mancha", "Miguel de Cervantes", "978-8420471133");
+
+        // Agregar libros a la biblioteca
+        miBiblioteca.agregarLibro(libro1);
+        miBiblioteca.agregarLibro(libro2);
+        miBiblioteca.agregarLibro(libro3);
+
+        // Buscar un libro por título
+        const libroEncontrado = miBiblioteca.buscarLibroPorTitulo("1984");
+        console.log(libroEncontrado); // Imprime el objeto libro2
+
+        // Eliminar un libro por ISBN
+        miBiblioteca.eliminarLibro("978-0525432253");
+
+        // Buscar el libro eliminado (debería retornar undefined)
+        const libroEliminado = miBiblioteca.buscarLibroPorTitulo("Cien años de soledad");
+        console.log(libroEliminado); // Imprime undefined porque ya a sido borrado
+    </script>
+</body>
+</html>
