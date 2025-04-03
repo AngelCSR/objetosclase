@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cursos=["BACHI2","2ESO","1ESO","BACHI1",]
+        //cursos.splice(1,2);//Elimina un elemento por su índice elimina 2eso(primer parametro) y un elementeo a partir del 1 parametro(segundo parametro)
+        //cursos.shift();//borra el primero del array
+        //cursos.unshift("1DAW");// aparece al principio del array y lo agrega
+        //cursos.pop();
+        //cursos.push("1DAW") añadimos al array
+        /*for(curso of cursos){
+            alert(curso);
+        }*/
+       //cursos.forEach(cursos=>alert(curso));//lo mismo de arriba pero de otra forma
+       //let cursosBosco=cursos.map(curso=>curso+" bosco");// modifica 
+       //cursosBosco.forEach(curso=>alert(curso));
+       //let cursoEncontrado=cursos.find(curso=>curso=="1ESO");
+       
+       /*if(!cursoEncontrado){// si no lo ha encontrado
+        alert("no encontrado")
+       } else {
+            alert(cursoEncontrado)
+       }*/ 
+      /*let cursoEncontrado=cursos.findIndex(curso=>curso=="BACHI1");//devuelve la posicion en el arry
+      if(cursoEncontrado==-1){// si no lo ha encontrado
+        alert("no encontrado")
+       } else {
+            alert(cursoEncontrado)
+       }*/
+       cursos.sort();//para ordenarlos
+       cursos.forEach(c=>alert(c));//recorremos el array y lo mostramos
+
+    </script>
+</body>
+</html>
