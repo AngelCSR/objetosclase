@@ -32,8 +32,16 @@
        } else {
             alert(cursoEncontrado)
        }*/
-       cursos.sort();//para ordenarlos
-       cursos.forEach(c=>alert(c));//recorremos el array y lo mostramos
+       //cursos.sort();//para ordenarlos
+       //cursos.forEach(c=>alert(c));//recorremos el array y lo mostramos
+       let alumnos=[
+        {nombre:"Juan",edad: 18},
+        {nombre:"Pepe",edad: 23},
+        {nombre:"Marta",edad: 15},
+        {nombre:"Manu",edad: 17}
+       ]
+       let alumnosMayores=alumnos.filter(alumno=>alumno.edad>17);
+       alumnosMayores.forEach(a=>alert(a.nombre));
 
     </script>
 </body>
